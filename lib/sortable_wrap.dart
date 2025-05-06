@@ -60,11 +60,18 @@ class SortableWrapState extends State<SortableWrap> {
 
   SortableWrapOptions get options => widget.options ?? (_options ??= SortableWrapOptions());
 
-  @override
-  void initState() {
-    super.initState();
-    initCachedWithChildren();
+  Brightness? _brightness;
+
+   @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    final brightness = Theme.of(context).brightness;
+    if (brightness != _brightness) {
+      _brightness = brightness;
+      initCachedWithChildren();
+    }
   }
+
 
   @override
   void didUpdateWidget(covariant SortableWrap oldWidget) {

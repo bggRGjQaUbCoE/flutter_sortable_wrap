@@ -1,7 +1,6 @@
 // ignore_for_file: constant_identifier_names
 
 import 'package:flutter/material.dart';
-import 'package:flutter_sortable_wrap/sortable_utils.dart';
 import 'package:flutter_sortable_wrap/sortable_wrap.dart';
 
 class SortableItem extends StatefulWidget {
