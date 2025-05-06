@@ -119,8 +119,7 @@ class SortableWrapState extends State<SortableWrap> {
       },
     );
     // return ColoredBox(color: Colors.grey, child: builder); // for debug :)
-    Widget clip(Widget child) => ClipRect(child: child);
-    return clip(builder);
+    return builder;
   }
 
   /// Wrapped with draggable widget
